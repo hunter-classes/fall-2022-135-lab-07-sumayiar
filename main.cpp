@@ -1,36 +1,36 @@
 #include <iostream>
 #include <string>
+#include "funcs.h"
 
 int main(){
    //TASK A
+   /*
     std::string a;
-
     while (getline(std::cin, a)){
         std::cout << removeLeadingSpaces(a) << std::endl;
-    }
-
+    }**/
     //TASK B
-    int b = 0;
-    std::cout << "Enter the number of lines of your input: " << std::endl;
-    std::cin >> b;
-    std::cout << "Enter your input: " << std::endl;
-    std::string line;
-    int startBraces = 0;
-    for (int i = 0; i <= b; i++){
-        getline(std::cin, line[i]);
-        std::cout << std::endl << "Indented output: " << std::endl << std::endl;
-    } 
+    int openBraces = 0;
+    std::string line; 
+    while (getline(std::cin, line)){
+        std::string newString;         
+        newString = removeLeadingSpaces(line);
 
-    for(int i = 1; i <= b; i++){
-        int endBraces = countChar(line, '}');
-        startBraces -= endBraces;  
-        
-        for(int j = 0; j < startBraces; j++)
-        std::cout << "\t";
-        std::cout << line << std::endl;
+            if (newString[0] == '}'){
+                openBraces--;
+            }
+            for (int j = 0; j < openBraces; j++){
+            std::cout << "\t";
+            }
 
-        int c = countChar(line, '{');
-        startBraces += c;
-    }
-    return 0;
+            std::cout << newString << std::endl;
+            int c = countChar(newString, '{');
+            openBraces += c;
+
+            if (newString[0] != '}'){ 
+                int d = countChar(newString, '}');
+                openBraces -= d;
+            }
+        }
+        return 0;  
 }

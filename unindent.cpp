@@ -22,3 +22,12 @@ std::string removeLeadingSpaces(std::string line){
     }
     return endResult;
 }
+
+int main(){
+    std::string a;
+
+    while (getline(std::cin, a)){
+        std::cout << removeLeadingSpaces(a) << std::endl;
+    }
+    return 0;
+}

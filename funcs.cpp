@@ -1,27 +1,23 @@
 #include <iostream>
 #include <string>
-
-std::string removeLeadingSpaces(std::string line);
-int countChar(std::string line, char c);
-
-std::string removeLeadingSpaces(std::string line){
-    std::string endResult; //contains the string that will return unindented
-    bool match = true;
-    for (int i = 0; i < line.size(); i++){
-        if (!(match && isspace(line[i]))){
-            endResult += line[i]; //adds elements of the string line to the unindented string "endResult"
-            match = false;
-        }
-    }
-    return endResult;
-}
+#include "funcs.h"
 
 int countChar(std::string line, char c){
-    int braces = 0;
+    int a = 0; //counts char in line
     for(int i = 0; i < line.length(); i++){
         if(line[i] == c){
-            braces++;
+            a++;
         }
     }
-    return braces;
+    return a;
+}
+
+std::string removeLeadingSpaces(std::string line){
+  int index = 0;
+    while (isspace(line[index])){
+      index++;
+    }
+    std::string endResult;
+    endResult = line.substr(index);
+    return endResult;
 }
