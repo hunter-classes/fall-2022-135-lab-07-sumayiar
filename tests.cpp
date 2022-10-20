@@ -12,16 +12,6 @@ This program countS the number of open and closed { } in it, and keepS track of 
 std::string removeLeadingSpaces(std::string line);
 int countChar(std::string line, char c);
 
-int countChar(std::string line, char c){
-    int braces;
-    for(int i = 0; i < line.length(); i++){
-        if(line[i] == c){
-            braces++;
-        }
-    }
-    return braces;
-}
-
 std::string removeLeadingSpaces(std::string line){
     std::string endResult = ""; //contains the string that will return unindented
     bool match = true;
@@ -34,17 +24,17 @@ std::string removeLeadingSpaces(std::string line){
     return endResult;
 }
 
-int main(){
-    std::string a;
-    int b = 0;
-    while (getline(std::cin, a)){
-        a = removeLeadingSpaces(a);
-        b -= countChar(a, '}');
-        for (int i = 0; i < b; i++){
-            std::cout << "\t"; 
+int countChar(std::string line, char c){
+    int braces = 0;
+    for(int i = 0; i < line.length(); i++){
+        if(line[i] == c){
+            braces++;
         }
-        std::cout << a << std::endl;
-        b += countChar(a, '{');
     }
-    return 0;
+    return braces;
 }
+
+
+
+
+

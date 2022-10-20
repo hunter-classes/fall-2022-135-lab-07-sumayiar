@@ -1,15 +1,8 @@
-/*
-Author: Sumayia Rashid
-Course: CSCI-135
-Instructor: Genady Maryash
-Assignment: Lab7A
-
-This program reads input from cin and prints out each input line with leading spaces removed.
-*/
 #include <iostream>
 #include <string>
 
 std::string removeLeadingSpaces(std::string line);
+int countChar(std::string line, char c);
 
 std::string removeLeadingSpaces(std::string line){
     std::string endResult; //contains the string that will return unindented
@@ -21,4 +14,14 @@ std::string removeLeadingSpaces(std::string line){
         }
     }
     return endResult;
+}
+
+int countChar(std::string line, char c){
+    int braces = 0;
+    for(int i = 0; i < line.length(); i++){
+        if(line[i] == c){
+            braces++;
+        }
+    }
+    return braces;
 }
