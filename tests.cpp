@@ -34,7 +34,28 @@ int countChar(std::string line, char c){
     return braces;
 }
 
+//Pseudocode from Tutor IGNORE
+
+//int main() {
+  // ? make a variable to track the number of open blocks
+  // ? While I can read in the line from cin 
+    // ? Use our function to remove leading spaces, save it to a variable
+
+    // ? Check if the first character of line is a '}', 
+      // ? subtract one from open blocks
+
+    // ? for however many open blocks,
+      // ? print out tabs '\t'
+    // ? print out the unindented line
+
+    // ? count the number of times '{' is in the line
+    // !use your function!
+    // ? add that number to the number of open blocks
+
+    // ? if the first character is not '}'
+      // ? count the number of '}' is in the line
+      // !use your function!
+      // ? subtract that number from the # of open blocks
 
 
-
-
+//}

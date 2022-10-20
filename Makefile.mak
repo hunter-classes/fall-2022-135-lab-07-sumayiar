@@ -9,3 +9,4 @@ main.o: main.cpp funcs.h
 tests.o: tests.cpp doctest.h funcs.h
 
 clean:
+	
