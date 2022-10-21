@@ -6,7 +6,7 @@
 
 * GitHub username: sumayiar
 
-* Notes: My indent.cpp and unindent.cpp files run accordingly and my code works. If my makefile doesn't work, run those two files.
+* Notes: Task A is currently commented out. Run Task A and Task B separately, they should run efficiently.
 
 
   
