@@ -6,7 +6,7 @@
 
 * GitHub username: sumayiar
 
-* Notes: Task A is currently commented out. Run Task A and Task B separately, they should run efficiently.
+* Notes: Task A is currently commented out. Could you please uncomment Task A, and Run Task A and Task B separately, they should run efficiently.
 
 
   
