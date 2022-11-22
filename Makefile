@@ -8,4 +8,4 @@ main.o: main.cpp funcs.h
 tests.o: tests.cpp doctest.h funcs.h
 
 clean:
-	rm -f main.o tests.o unindented.o indented.o
+	rm -f main.o tests.o unindented.o indented.o funcs.o
